@@ -1,0 +1,17 @@
+program CheckPrime;
+ 
+const
+  maxNumber=100;
+var
+  x, y:integer;
+ 
+begin
+  for x := 2 to maxNumber do
+  begin
+    for y := 2 to x do
+      if (x mod y)=0 then
+        writeln('x');
+      if(y = x) then
+        writeln(x, ' ');
+  end;
+end.
