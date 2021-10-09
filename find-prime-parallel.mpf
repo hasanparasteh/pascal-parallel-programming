@@ -7,36 +7,38 @@ var
 
 begin
 
-	for i:=2 to N  do
-		PrimeNum[i]:=true;
+	  for i:=2 to N  do
+		  PrimeNum[i]:=true;
    
-   j:=2;
-   Fork while 2*j<=N  do
-     begin
-		PrimeNum[2*j]:=false;
-      j:=j+1;
-     end;
     j:=2;
-    while 3*j<=N  do
-     begin
-		  PrimeNum[3*j]:=false;
-      j:=j+1;
-     end;
+    Fork while 2*j<=N  do
+      begin
+		    PrimeNum[2*j]:=false;
+        j:=j+1;
+      end;
+    
+    j:=2;
+    Fork while 3*j<=N  do
+      begin
+		    PrimeNum[3*j]:=false;
+        j:=j+1;
+    end;
 
- j:=2;
+   j:=2;
    Fork while 5*j<=N  do
-     begin
-		PrimeNum[5*j]:=false;
-      j:=j+1;
-     end;
+      begin
+		    PrimeNum[5*j]:=false;
+        j:=j+1;
+      end;
 
- j:=2;
-   Fork while 7*j<=N  do
-     begin
-		PrimeNum[7*j]:=false;
-      j:=j+1;
-     end;
+    j:=2;
+    Fork while 7*j<=N  do
+      begin
+		    PrimeNum[7*j]:=false;
+        j:=j+1;
+      end;
 
+     Join;
      Join;
      Join;
      Join;
@@ -44,12 +46,5 @@ begin
   for i:=2 to n do 
      writeln(i, ' is prime ?  ', PrimeNum[i]);
 
-
-
-
-
-
-
-  
 end.
       
