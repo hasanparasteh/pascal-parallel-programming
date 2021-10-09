@@ -1,25 +1,25 @@
 Program Primechk; 
 
-Var 
-    Num: Integer; 
+var 
+    num: Integer; 
     checker, count, adder: Integer; 
 
-Begin 
-    Write('Enter one number : '); 
-    Readln(Num); 
+begin 
+    write('Enter one number : '); 
+    readln(num); 
     adder := 0; 
-    For count := 1 to 10 do 
+    for count := 1 to 10 do 
     begin 
         checker := num mod count; 
         if checker = 0 then 
-        adder := adder + 1 
+            adder := adder + 1 
     end; 
 
     if (num <= 10) and (adder > 2) then 
-        Writeln(num, ' is not a prime number') 
+        writeln(num, ' is not a prime number') 
     else 
         if (num > 10) and (adder > 1) then 
-            Writeln(num, ' is not a prime number') 
+            writeln(num, ' is not a prime number') 
         else 
-            Writeln(num,' is a prime number'); 
+            writeln(num,' is a prime number'); 
 end.
